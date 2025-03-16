@@ -26,21 +26,41 @@
 
 # Testing and learning basic slidng window cocept
 
-def max_sum_sub_array(arr, k):
-    max_sum = float('inf')
-    window_sum = sum(arr[:k])
-    max_sum = window_sum
+# def max_sum_sub_array(arr, k):
+#     max_sum = float('inf')
+#     window_sum = sum(arr[:k])
+#     max_sum = window_sum
 
-    for i in range(len(arr) - k):
-        window_sum = window_sum - arr[i] + arr[i + k]
-        max_sum = max(max_sum, window_sum)
+#     for i in range(len(arr) - k):
+#         window_sum = window_sum - arr[i] + arr[i + k]
+#         max_sum = max(max_sum, window_sum)
 
-    return max_sum
+#     return max_sum
 
-arr = [2,1,5,1,3,2]
-k = 3
+# arr = [2,1,5,1,3,2]
+# k = 3
 
-print (max_sum_sub_array(arr, k))
+# print (max_sum_sub_array(arr, k))
+
+
+# 209. Minimum Size Subarray Sum
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        n = len(nums)
+        left = 0
+        min_value = float('inf')
+        current_sum = 0
+
+        for right in range(n):
+            current_sum += nums[right]
+
+            while current_sum >= target:
+                min_value = min(min_value, right - left + 1)
+                current_sum -= nums[left]
+                left += 1
+
+        return min_value if min_value != float('inf') else 0
+
 
 
 
