@@ -80,6 +80,8 @@ class Solution:
                 window.remove(nums[i - k])
             
         return False
+    
+#Q3
 
 
 
