@@ -66,22 +66,45 @@
 
 
 # 219. Contains Duplicate II
-class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        window = set()
+# class Solution:
+#     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+#         window = set()
 
-        for i in range(len(nums)):
-            if nums[i] in window:
-                return True
+#         for i in range(len(nums)):
+#             if nums[i] in window:
+#                 return True
 
-            window.add(nums[i])
+#             window.add(nums[i])
 
-            if len(window) > k:
-                window.remove(nums[i - k])
+#             if len(window) > k:
+#                 window.remove(nums[i - k])
             
-        return False
+#         return False
     
 # 3. Longest Substring Without Repeating Characters
+def lengthOfLongestSubstring(self, s: str) -> int:
+
+        char_set = set()
+        left = 0
+        max_length = 0
+    
+
+        for right in range(len(s)):
+            while s[right] in char_set:
+                char_set.remove(s[left])
+                left += 1
+
+            char_set.add(s[right])
+            max_length = max(max_length, right - left+1)
+
+        return max_length
+
+
+
+    
+
+        
+
 
 
 
