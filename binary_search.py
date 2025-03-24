@@ -16,4 +16,7 @@ class Solution:
         
         return -1
     
-# 2. Binary Search
+# 69. Sqrt(x)
+def mySqrt(x):
+    if x == 0 or x == 1:
+        return x  # Base cases
