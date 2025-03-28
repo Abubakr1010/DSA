@@ -40,4 +40,5 @@ class Solution:
 
 #         return ans
 
-34. Find First and Last Position of Element in Sorted Array
+# 34. Find First and Last Position of Element in Sorted Array
+# incomplete
