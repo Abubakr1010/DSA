@@ -42,3 +42,6 @@ class Solution:
 
 # 34. Find First and Last Position of Element in Sorted Array
 # incomplete
+left = 0
+right = 0
+
