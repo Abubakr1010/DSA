@@ -43,5 +43,16 @@ class Solution:
 # 34. Find First and Last Position of Element in Sorted Array
 # incomplete
 left = 0
-right = 0
+        right = len(nums)-1
+        bound = -1
+
+        while left <= right:
+            mid = (left+right)//2
+            if nums[mid]==target:
+                bound = mid
+            elif nums[mid] < target:
+                left = mid+1
+            else:
+                right = mid-1
+        return bound
 
