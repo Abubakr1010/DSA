@@ -42,17 +42,28 @@ class Solution:
 
 # 34. Find First and Last Position of Element in Sorted Array
 # incomplete
-left = 0
-        right = len(nums)-1
-        bound = -1
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        def findBound(isLeft: bool) -> int:
+            left, right = 0, len(nums) - 1
+            bound = -1
+            
+            while left <= right:
+                mid = (left + right) // 2
+                if nums[mid] == target:
+                    bound = mid  # Potential answer found
+                    if isLeft:
+                        right = mid - 1  # Keep searching left
+                    else:
+                        left = mid + 1   # Keep searching right
+                elif nums[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+            
+            return bound
 
-        while left <= right:
-            mid = (left+right)//2
-            if nums[mid]==target:
-                bound = mid
-            elif nums[mid] < target:
-                left = mid+1
-            else:
-                right = mid-1
-        return bound
+        left_index = findBound(True)
+        right_index = findBound(False)
 
+        return [left_index, right_index]
