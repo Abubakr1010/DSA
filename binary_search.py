@@ -41,7 +41,6 @@ class Solution:
 #         return ans
 
 # 34. Find First and Last Position of Element in Sorted Array
-# incomplete
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         def findBound(isLeft: bool) -> int:
