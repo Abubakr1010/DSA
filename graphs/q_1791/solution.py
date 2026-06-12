@@ -1,5 +1,5 @@
 class Solution:
-    def findCenter(self, edges: List[List[int]]) -> int:
+    def findCenter(self, edges) -> int:
         u1, v1 = edges[0]
         u2, v2 = edges[1]
 
