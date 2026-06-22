@@ -1,7 +1,7 @@
 # 997. Find the Town Judge
 
 class Solution:
-    def findJudge(self, n: int, trust: List[List[int]]) -> int:
+    def findJudge(self, n: int, trust):
        # first i will create a trust score list
        trust_score = [0] * (n + 1)
 
