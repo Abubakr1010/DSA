@@ -5,7 +5,7 @@
 # return this value. Any answer with a calculation error less than 10-5 will be accepted.
 
 class Solution:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+    def findMaxAverage(self, nums, k) -> float:
         # --- EDGE CASE ---
         # if k size > nums return False
 
