@@ -28,7 +28,7 @@ class Solution:
         while right and right.next:
             left = left.next
             right = right.next.next
-            if right == left:
+            if left == right:
                 return True
 
         return False
