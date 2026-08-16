@@ -14,7 +14,7 @@ class Node:
             return None
 
         self.inorder_traverse(root.left)
-        print(root.value)
+        print(root.val)
         self.inorder_traverse(root.right)
 
         return root
@@ -25,7 +25,7 @@ class Node:
         if root is None:
             return None
 
-        print (root.value)
+        print (root.val)
         self.preorder_traverse(root.left)
         self.preorder_traverse(root.right)
 
@@ -40,10 +40,21 @@ class Node:
 
         self.postoreder_traverse(root.left)
         self.postoreder_traverse(root.right)
-        print(root.value)
+        print(root.val)
 
         return root
 
+    def list_inorder_traverse(self, root, result=None):
+
+        if result is None:
+            result = []
+
+        if root is not None:
+            self.list_inorder_traverse(root.left, result)
+            result.append(root.val)
+            self.list_inorder_traverse(root.right, result)
+
+        return root
         
 
 
