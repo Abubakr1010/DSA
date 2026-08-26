@@ -13,3 +13,13 @@ class Solution:
             return False
         
         return self.isPowerOfThree(n//3)
+
+        # --- TIME COMPLEXITY ---
+        # O(log N) because the number is reduced everytime
+
+        # --- SPACE COMPLEXITY ---
+        # O(log N) due to stack stack storing
+
+
+
+    
