@@ -1,18 +1,32 @@
-# 997. Find the Town Judge
+from typing import List
+
 
 class Solution:
-    def findJudge(self, n: int, trust):
-       # first i will create a trust score list
-       trust_score = [0] * (n + 1)
+    def findJudge(self, n: int, trust: List[List[int]]) -> int:
 
-       # lets loop and give -1 if they trust and +1 if they don't
+      if n is None:
+        return -1
 
-       for a, b in trust:
-        trust_score[a] -= 1
-        trust_score[b] += 1
+      scores = [0] * (n+1)
 
-       for i in range(1, n+1):
-            if trust_score[i] == n - 1:
-                return i
+      for a,b in trust:
+        scores[a] -= 1
+        scores[b] += 1
 
-       return -1
+      for i in range(1, n+1):
+        if scores[i] == n-1:
+            return i
+      return -1 
+
+
+      # --- TIME COMPLEXITY ---
+      # O(V+E) depends on number of vertex
+      # --- SPACE COMPLEXITY ---
+      # O(V) number ov vertex creates score
+
+      
+
+    
+
+
+        
