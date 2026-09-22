@@ -1,6 +1,6 @@
 n = [5,2,8,1]
 
-def merge_sort(n:int) -> list[int]:
+def merge_sort(n:list[int]) -> list[int]:
     s = len(n)
     for i in range(s):
         for j in range(0, s-i-1):
