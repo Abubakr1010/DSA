@@ -1,4 +1,4 @@
-def wordBreak(self, s: str, wordDict: list[str]) -> bool:
+def wordBreak(s: str, wordDict) -> bool:
 
 
         unique = set(wordDict)
