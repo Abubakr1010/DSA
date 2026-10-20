@@ -23,7 +23,7 @@ class Solution:
         if head is None or not head.next:
             return False
 
-        left = right = head
+        left = right = heads
 
         while right and right.next:
             left = left.next
