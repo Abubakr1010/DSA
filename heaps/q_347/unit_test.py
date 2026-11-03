@@ -1,4 +1,4 @@
-import solution
+import graphs.q_841_keys_and_rooms_bfs.solution as solution
 
 
 def test_if_k_len_greater_than_nums():

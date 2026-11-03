@@ -1,4 +1,4 @@
-from solution import longestConsecutive
+from graphs.q_841_keys_and_rooms_bfs.solution import longestConsecutive
 
 
 def test_sequence():

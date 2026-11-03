@@ -1,4 +1,4 @@
-from solution import TreeNode, Solution
+from graphs.q_841_keys_and_rooms_bfs.solution import TreeNode, Solution
 
 
 def test_sortedArrayToBST():

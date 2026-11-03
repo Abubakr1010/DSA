@@ -1,4 +1,4 @@
-import solution
+import graphs.q_841_keys_and_rooms_bfs.solution as solution
 
 
 def test_find_judge_in_the_town():

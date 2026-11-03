@@ -1,6 +1,6 @@
 import sys
 import time
-from solution import Solution
+from graphs.q_841_keys_and_rooms_bfs.solution import Solution
 
 
 def performance_test():

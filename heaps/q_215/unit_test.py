@@ -1,4 +1,4 @@
-import solution as solution
+import graphs.q_841_keys_and_rooms_bfs.solution as solution
 
 
 def test_if_multiple_same_integers():
